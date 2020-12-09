@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
+        android:id="@+id/contenedor">
+
+        <TextView
+            android:layout_marginTop="10sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buscar ruta"
+            android:id="@+id/txtTitulo"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"></TextView>
+
+        <LinearLayout
+            android:layout_weight="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/etSearchMap"
+                android:layout_weight="9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </EditText>
+            <Button
+                android:id="@+id/btnSearchMapa"
+                android:layout_weight="1"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:text="+">
+            </Button>
+        </LinearLayout>
+
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:id="@+id/map2"
+            tools:context=".MapsActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+        <LinearLayout
+            android:layout_margin="10sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10">
+            <TextView
+                android:id="@+id/txtEstadoTitle"
+                android:layout_marginRight="10sp"
+                android:textSize="16sp"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:layout_weight="2"
+                android:text="Estado:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/txtEstado"
+                android:textSize="16sp"
+                android:layout_weight="6"
+                android:text="Estado ..."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="10sp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10">
+            <TextView
+                android:id="@+id/txtRutaAlternaTitle"
+                android:visibility="invisible"
+                android:layout_marginRight="10sp"
+                android:textSize="16sp"
+                android:gravity="end"
+                android:textStyle="bold"
+                android:layout_weight="2"
+                android:text="Ruta Alterna:"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content">
+            </TextView>
+            <TextView
+                android:id="@+id/txtRutaAlterna"
+                android:visibility="invisible"
+                android:textSize="16sp"
+                android:layout_weight="6"
+                android:text="Ruta Alterna ..."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
